@@ -1,0 +1,59 @@
+.roboto-roboto {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+body{
+    font-family: Roboto, serif;
+    margin: 0;
+    background-color: #3C3D37;
+}
+header{
+    height: 100px;
+}
+#logoNav{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 40px;
+}
+.navBarBtn{
+    display: flex;
+    /*width: 100%;*/
+    align-items: center;
+    justify-content: center;
+}
+#navigationLinksContainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+nav{
+    background-color: #181C14;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navBarBtn:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#containerHero > h1{
+    font-size: 120px;
+    margin-bottom: 4px;
+}
+#containerHero >h2{
+    font-size: 70px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+#containerHero{
+    margin-left: 40px;
+    color: white;
+}
