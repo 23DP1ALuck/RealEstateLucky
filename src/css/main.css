@@ -50,7 +50,7 @@ header{
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 70px;
+    width: 80px;
     height: 50px;
     border-radius: 50%;
     transition: all ease-in-out 0.3s;
@@ -140,6 +140,10 @@ nav{
     /* background-color: rgba(0, 0, 0, 0.3); */
     width: 500px;
     height: 300px;
+    opacity: 0;
+}
+#imageHolderHero.append{
+    opacity: 1;
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
 @keyframes underline {
@@ -181,14 +185,24 @@ nav{
         opacity: 1;
     }
 }
-.heroTitle{
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-}
 #heroSubtitle{
+    opacity: 0;
+}
+#heroSubtitle.visible{
+    opacity: 1;
     animation: 1s ease-out 0s 1 slideInLeftSubHero;
+}
+.heroTitle{
+    opacity: 0;
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+}
+.heroTitle.show{
+    opacity: 1;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 #aim{
     position: relative;
+    padding-top: 15vh;
 }
 #aim > h1{
     text-align: center;
@@ -207,7 +221,7 @@ nav{
     color: white;
     width: 200px;
     height: 300px;
-    background-color: #1E3A5F;
+    /* background-color: #1E3A5F; */
     border-radius: 10%;
     position: relative;
     border: 2px solid #ffffff;
@@ -240,7 +254,7 @@ nav{
     width: 100%;
     height: 20%;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .aimCard > .aimCardImg{
     width: 100px;
@@ -254,4 +268,87 @@ nav{
     font-size: 13px;
     z-index: 2;
     position: relative;
+}
+#contactUs{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#contactUsContainer{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    width: 40%;
+    height: 50vh;
+    margin-bottom: 10vh;
+}
+#contactUs > h1{
+    text-align: center;
+    font-size: 70px;
+    color: white;
+}
+.contactUsForm{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 80%;
+    height: 50px;
+}
+.imageInsideInput{
+    width: 30px;
+    height: 30px;
+}
+.containerImageInsideInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding-left: 5px;
+}
+.contactUsInput{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+#messageForm{
+    height: 15vh;
+    width: 60%
+}
+#MessageText{
+    margin-left: 5px;
+}
+.contactUsInput::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+#messageAndSubmit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+#submitBtn{
+    background-color: #ffffff;
+    color: #3C3D37;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
 }
