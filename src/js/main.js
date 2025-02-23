@@ -67,7 +67,7 @@ function showNotification(){
         setTimeout(() => {
             emailSentNotification.classList.remove('show');
             emailSentNotification.classList.remove('hide');
-        }, 1000);
+        }, 900);
     }, 3000);
 }
 const errorNotification = document.getElementById('emailErrorNotification')
@@ -78,6 +78,7 @@ function showErrorNotification(){
         setTimeout(() =>{
             errorNotification.classList.remove('show');
             errorNotification.classList.remove('hide');
-        }, 1000);
+        }, 900);
     }, 3000);
 }
+

@@ -235,7 +235,7 @@ nav{
     font-size: 17px;
 }
 .aimCard::before{
-    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
     transition: all ease-in-out 0.3s;
     content: "";
     left: 0;
@@ -262,11 +262,15 @@ nav{
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 15px;
+    position: relative;
 }
 .aimCard > .aimCardText{
     margin-top: 30px;
     font-size: 13px;
     z-index: 2;
+    position: relative;
+}
+.aimCard > h3{
     position: relative;
 }
 #contactUs{
@@ -284,7 +288,7 @@ nav{
     align-items: center;
     flex-direction: column;
     border: 2px solid #ffffff;
-    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
     border-radius: 50px;
     width: 40%;
     height: 50vh;
@@ -296,7 +300,7 @@ nav{
     color: white;
 }
 .contactUsForm{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     margin-top: 20px;
@@ -371,7 +375,7 @@ nav{
     margin: 10px;
     width: 13vh;
     height: 5vh;
-    background-color: rgb(15, 255, 7);
+    background-color: rgba(15, 255, 7, 0.5);
     border-radius: 10px;
     z-index: 9999;
 }
@@ -407,8 +411,12 @@ nav{
     bottom: 0;
     right: 0;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
     margin: 30px;
-    background-color: rgb(255, 7, 7);
+    width: 13vh;
+    height: 5vh;
+    background-color: rgba(255, 7, 7, 0.5);
     border-radius: 10px;
     z-index: 9999;
     position: fixed
@@ -423,4 +431,58 @@ nav{
 }
 #emailErrorNotification.show.hide{
     animation: hideNotification 1s ease-out;
+}
+#contacts > h1{
+    margin-top: 20vh;
+    color: white;
+    position: relative;
+    font-size: 70px;
+}
+#contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40vh;
+}
+#contactsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 50vh;
+    backdrop-filter: blur(5px);
+    margin-bottom: 5vh;
+    border: 2px solid white;
+    border-radius: 40px;
+}
+#contactsContainer > h3{
+    font-size: 25px;
+    margin: 5px;
+    color: white;
+}
+#contactsContainer > p{
+    color: white;
+    font-size: 17px;
+}
+#contactsContainer > ul, li{
+    list-style-type: "• ";
+    color: white;
+    margin: 3px;
+    font-size: 17px;
+}
+footer{
+    height: 8vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p{
+    font-size: 17px;
+    font-weight: bold;
+    position: relative;
 }
