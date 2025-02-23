@@ -13,6 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>Lucky Real Estate</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "K3tYgmjwuMfPtsEvQ",
+        });
+    })();
+    </script>
 </head>
 <body id="mainPage">
     <header>
@@ -85,25 +96,31 @@
                     <div class="containerImageInsideInput">
                         <img class="imageInsideInput" src="src/images/full-name-8.png" alt="User icon">
                     </div>
-                    <input type="text" placeholder="Full name" class="contactUsInput" id="fullName">
+                    <input type="text" placeholder="Full name" class="contactUsInput" id="fullName" name="fullName">
                 </div>
                 <div class="contactUsForm">
                     <div class="containerImageInsideInput">
                         <img class="imageInsideInput" src="src/images/email-8.png" alt="Email icon">
                     </div>
-                    <input type="email" placeholder="Email" class="contactUsInput" id="email">
+                    <input type="email" placeholder="Email" class="contactUsInput" id="email" name="email">
                 </div>
                 <div class="contactUsForm">
                     <div class="containerImageInsideInput">
                         <img class="imageInsideInput" src="src/images/pencil.png" alt="Pencil Icon">
                     </div>
-                    <input type="text" placeholder="Subject" class="contactUsInput" id="subject">
+                    <input type="text" placeholder="Subject" class="contactUsInput" id="subject" name="subject">
                 </div>
                 <div id="messageAndSubmit">
                     <div class="contactUsForm" id="messageForm">
-                        <input placeholder="Message" class="contactUsInput" id="MessageText"></input>
+                        <textarea placeholder="Message" class="contactUsInput" id="MessageText" name="MessageText"></textarea>
                     </div>
                     <button type="submit" id="submitBtn">Submit</button>
+                </div>
+                <div id="emailSentNotification">
+                    <p id="emailSentNotificationText">Email sent successfully!</p>
+                </div>
+                <div id="emailErrorNotification">
+                    <p id="emailErrorNotificationText">Please fill in all fields!</p>
                 </div>
         </section>
     </main>

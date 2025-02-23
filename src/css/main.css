@@ -16,7 +16,7 @@ body{
     font-family: Roboto, serif;
     margin: 0;
     background-color: #3C3D37;
-    background-image: url("../images/test.jpg");
+    background-image: url("../images/reeeealll.jpg");
     background-size: cover;
     position: relative;
     min-height: 100vh;
@@ -331,6 +331,14 @@ nav{
 }
 #MessageText{
     margin-left: 5px;
+    resize: none;
+    border-radius: 20px;
+    padding-top: 10px;
+    font-family: Roboto, serif;
+}
+#MessageText::placeholder{
+    padding-top: 6vh;
+    font-family: Roboto, serif;
 }
 .contactUsInput::placeholder{
     color: rgba(255, 255, 255, 0.6);
@@ -351,4 +359,68 @@ nav{
     height: 40px;
     margin-top: 20px;
     cursor: pointer;
+}
+#emailSentNotification{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    width: 13vh;
+    height: 5vh;
+    background-color: rgb(15, 255, 7);
+    border-radius: 10px;
+    z-index: 9999;
+}
+#emailSentNotification.show{
+    display: flex;
+    animation: slideFromRightNotification 1s ease-in-out;
+}
+#emailSentNotification.show.hide{
+    animation: hideNotification 1s ease-out;
+}
+@keyframes slideFromRightNotification{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes hideNotification{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+#emailErrorNotification{
+    display: none;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin: 30px;
+    background-color: rgb(255, 7, 7);
+    border-radius: 10px;
+    z-index: 9999;
+    position: fixed
+}
+#emailErrorNotificationText{
+    color: white;
+    margin-bottom: 20px;
+}
+#emailErrorNotification.show{
+    display: flex;
+    animation: slideFromRightNotification 1s ease-in-out;
+}
+#emailErrorNotification.show.hide{
+    animation: hideNotification 1s ease-out;
 }
