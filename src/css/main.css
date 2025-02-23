@@ -16,7 +16,7 @@ body{
     font-family: Roboto, serif;
     margin: 0;
     background-color: #3C3D37;
-    background-image: url("../images/test.jpg");
+    background-image: url("../images/reeeealll.jpg");
     background-size: cover;
     position: relative;
     min-height: 100vh;
@@ -50,7 +50,7 @@ header{
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 70px;
+    width: 80px;
     height: 50px;
     border-radius: 50%;
     transition: all ease-in-out 0.3s;
@@ -140,6 +140,10 @@ nav{
     /* background-color: rgba(0, 0, 0, 0.3); */
     width: 500px;
     height: 300px;
+    opacity: 0;
+}
+#imageHolderHero.append{
+    opacity: 1;
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
 @keyframes underline {
@@ -181,14 +185,24 @@ nav{
         opacity: 1;
     }
 }
-.heroTitle{
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-}
 #heroSubtitle{
+    opacity: 0;
+}
+#heroSubtitle.visible{
+    opacity: 1;
     animation: 1s ease-out 0s 1 slideInLeftSubHero;
+}
+.heroTitle{
+    opacity: 0;
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+}
+.heroTitle.show{
+    opacity: 1;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 #aim{
     position: relative;
+    padding-top: 15vh;
 }
 #aim > h1{
     text-align: center;
@@ -207,7 +221,7 @@ nav{
     color: white;
     width: 200px;
     height: 300px;
-    background-color: #1E3A5F;
+    /* background-color: #1E3A5F; */
     border-radius: 10%;
     position: relative;
     border: 2px solid #ffffff;
@@ -221,7 +235,7 @@ nav{
     font-size: 17px;
 }
 .aimCard::before{
-    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
     transition: all ease-in-out 0.3s;
     content: "";
     left: 0;
@@ -240,7 +254,7 @@ nav{
     width: 100%;
     height: 20%;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .aimCard > .aimCardImg{
     width: 100px;
@@ -248,10 +262,227 @@ nav{
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 15px;
+    position: relative;
 }
 .aimCard > .aimCardText{
     margin-top: 30px;
     font-size: 13px;
     z-index: 2;
+    position: relative;
+}
+.aimCard > h3{
+    position: relative;
+}
+#contactUs{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#contactUsContainer{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+    width: 40%;
+    height: 50vh;
+    margin-bottom: 10vh;
+}
+#contactUs > h1{
+    text-align: center;
+    font-size: 70px;
+    color: white;
+}
+.contactUsForm{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 80%;
+    height: 50px;
+}
+.imageInsideInput{
+    width: 30px;
+    height: 30px;
+}
+.containerImageInsideInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding-left: 5px;
+}
+.contactUsInput{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+#messageForm{
+    height: 15vh;
+    width: 60%
+}
+#MessageText{
+    margin-left: 5px;
+    resize: none;
+    border-radius: 20px;
+    padding-top: 10px;
+    font-family: Roboto, serif;
+}
+#MessageText::placeholder{
+    padding-top: 6vh;
+    font-family: Roboto, serif;
+}
+.contactUsInput::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+#messageAndSubmit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+#submitBtn{
+    background-color: #ffffff;
+    color: #3C3D37;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#emailSentNotification{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    width: 13vh;
+    height: 5vh;
+    background-color: rgba(15, 255, 7, 0.5);
+    border-radius: 10px;
+    z-index: 9999;
+}
+#emailSentNotification.show{
+    display: flex;
+    animation: slideFromRightNotification 1s ease-in-out;
+}
+#emailSentNotification.show.hide{
+    animation: hideNotification 1s ease-out;
+}
+@keyframes slideFromRightNotification{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes hideNotification{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+#emailErrorNotification{
+    display: none;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    width: 13vh;
+    height: 5vh;
+    background-color: rgba(255, 7, 7, 0.5);
+    border-radius: 10px;
+    z-index: 9999;
+    position: fixed
+}
+#emailErrorNotificationText{
+    color: white;
+    margin-bottom: 20px;
+}
+#emailErrorNotification.show{
+    display: flex;
+    animation: slideFromRightNotification 1s ease-in-out;
+}
+#emailErrorNotification.show.hide{
+    animation: hideNotification 1s ease-out;
+}
+#contacts > h1{
+    margin-top: 20vh;
+    color: white;
+    position: relative;
+    font-size: 70px;
+}
+#contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40vh;
+}
+#contactsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 50vh;
+    backdrop-filter: blur(5px);
+    margin-bottom: 5vh;
+    border: 2px solid white;
+    border-radius: 40px;
+}
+#contactsContainer > h3{
+    font-size: 25px;
+    margin: 5px;
+    color: white;
+}
+#contactsContainer > p{
+    color: white;
+    font-size: 17px;
+}
+#contactsContainer > ul, li{
+    list-style-type: "• ";
+    color: white;
+    margin: 3px;
+    font-size: 17px;
+}
+footer{
+    height: 8vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p{
+    font-size: 17px;
+    font-weight: bold;
     position: relative;
 }

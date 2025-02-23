@@ -11,8 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="src/images/RealEstate.png">
     <title>Lucky Real Estate</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "K3tYgmjwuMfPtsEvQ",
+        });
+    })();
+    </script>
 </head>
 <body id="mainPage">
     <header>
@@ -26,11 +37,12 @@
                     <a href="#aim">Our aim</a>
                 </div>
                 <div class="navBarBtn">
-                    About us
+                    <a href="#contacts"> Contacts </a>
                 </div>
                 <div class="navBarBtn">
-                    Contacts
+                    <a href="#contactUs">Contact us</a>
                 </div>
+
             </div>
         </nav>
     </header>
@@ -57,7 +69,7 @@
         <section id="aim">
             <h1 id="aimTitle">
                 Our aim
-            </h2>
+            </h1>
             <div id="aimCardsContainer">
                 <div class="aimCard">
                     <h3>Customer Satisfaction</h3>
@@ -76,7 +88,94 @@
                 </div>
             </div>
         </section>
+        <section id="contacts">
+            <h1>
+                Contacts
+            </h1>
+            <div id="contactsContainer">
+                <h3>
+                    📍 Our Office:
+                </h3>
+                <p>
+                    Bongo iela 20, Olaine, Latvia
+                </p>
+                <h3>
+                    📞 Phone:
+                </h3>
+                <p>
+                    +37120011079
+                </p>
+                <h3>
+                    ✉️ Email:
+                </h3>
+                <p>
+                    realestateluckyy@gmail.com
+                </p>
+                <h3>
+                    🕒 Working Hours:
+                </h3>
+                <ul>
+                    <li>
+                        Monday - Friday : 9:00 AM - 6:00 PM
+                    </li>
+                    <li>
+                        Saturday: 10:00 AM - 4:00 PM
+                    </li>
+                    <li>
+                        Sunday: Closed
+                    </li>
+                </ul>
+                <h3>
+                    💬 Get in Touch:
+                </h3>
+                <p>
+                    Have questions? Fill out the form below, and we’ll get back to you as soon as possible!
+                </p>
+            </div>
+        </section>
+        <section id="contactUs">
+            <h1 id="contactUsTitle">
+                Contact us
+            </h1>
+            <div id="contactUsContainer">
+                <div class="contactUsForm">
+                    <div class="containerImageInsideInput">
+                        <img class="imageInsideInput" src="src/images/full-name-8.png" alt="User icon">
+                    </div>
+                    <input type="text" placeholder="Full name" class="contactUsInput" id="fullName" name="fullName">
+                </div>
+                <div class="contactUsForm">
+                    <div class="containerImageInsideInput">
+                        <img class="imageInsideInput" src="src/images/email-8.png" alt="Email icon">
+                    </div>
+                    <input type="email" placeholder="Email" class="contactUsInput" id="email" name="email">
+                </div>
+                <div class="contactUsForm">
+                    <div class="containerImageInsideInput">
+                        <img class="imageInsideInput" src="src/images/pencil.png" alt="Pencil Icon">
+                    </div>
+                    <input type="text" placeholder="Subject" class="contactUsInput" id="subject" name="subject">
+                </div>
+                <div id="messageAndSubmit">
+                    <div class="contactUsForm" id="messageForm">
+                        <textarea placeholder="Message" class="contactUsInput" id="MessageText" name="MessageText"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn">Submit</button>
+                </div>
+                <div id="emailSentNotification">
+                    <p id="emailSentNotificationText">Email sent successfully!</p>
+                </div>
+                <div id="emailErrorNotification">
+                    <p id="emailErrorNotificationText">Please fill in all fields!</p>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <p>
+            © 2025 Real Estate Lucky. All rights reserved.
+        </p>
+    </footer>
 <script src="src/js/main.js"></script>
 </body>
 </html>
