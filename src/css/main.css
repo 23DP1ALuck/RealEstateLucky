@@ -32,15 +32,15 @@ body::before{
     background-color: rgba(0, 0, 0, 0.6);
 }
 header{
-    height: 100px;
+    height: 10vh;
     position: sticky;
     top: 0;
     z-index: 9999;
 }
 #logoNav{
     border-radius: 50%;
-    width: 150px;
-    height: 80px;
+    width: 10vw;
+    height: 10vh;
     position: relative;
     left: 40px;
 }
@@ -50,8 +50,8 @@ header{
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 50px;
+    width: 6vw;
+    height: 6vh;
     border-radius: 50%;
     transition: all ease-in-out 0.3s;
 }
@@ -69,7 +69,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
     display: flex;
-    height: 100px;
+    height: 13vh;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -103,21 +103,21 @@ nav{
     position: relative;
 }
 #firstBlockWithTextHero > h1{
-    font-size: 120px;
+    font-size: 10vw;
     margin-bottom: 4px;
 }
 #firstBlockWithTextHero >h2{
-    font-size: 70px;
+    font-size: 5vw;
     margin-left: 40px;
     margin-top: 20px;
 }
 
 #firstBlockWithTextHero > p{
-    font-size: 20px;;
+    font-size: 1.4vw;
 }
 
 #heroSubtitle{
-    width: 680px;
+    width: 50vw;
     position: relative;
 }
 #heroSubtitle::after{
@@ -219,8 +219,8 @@ nav{
 .aimCard{
     text-align: center;
     color: white;
-    width: 200px;
-    height: 300px;
+    width: 15vw;
+    height: 40vh;
     /* background-color: #1E3A5F; */
     border-radius: 10%;
     position: relative;
@@ -276,7 +276,7 @@ nav{
 #contactUs{
     display: flex;
     flex-direction: column;
-    padding-top: 15vh;
+    /* padding-top: 15vh; */
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -290,8 +290,9 @@ nav{
     border: 2px solid #ffffff;
     backdrop-filter: blur(5px);
     border-radius: 50px;
-    width: 40%;
-    height: 50vh;
+    width: 40vw;
+    padding: 2vh;
+    height: auto;
     margin-bottom: 10vh;
 }
 #contactUs > h1{
@@ -303,7 +304,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2vh;
     border-radius: 20px;
     border: 1px solid white;
     width: 80%;
@@ -433,7 +434,7 @@ nav{
     animation: hideNotification 1s ease-out;
 }
 #contacts > h1{
-    margin-top: 20vh;
+    margin-top: 10vh;
     color: white;
     position: relative;
     font-size: 70px;
@@ -450,8 +451,8 @@ nav{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 40vw;
-    height: 55vh;
+    width: 50vw;
+    height: auto;
     backdrop-filter: blur(5px);
     margin-bottom: 5vh;
     border: 2px solid white;
